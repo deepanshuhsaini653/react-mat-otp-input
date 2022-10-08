@@ -1,5 +1,5 @@
 {
-  "name": "react-mat-auth",
+  "name": "react-mat-authentication",
   "version": "1.1.0",
   "description": "This is a react library",
   "main": "dist/cjs/index.js",
