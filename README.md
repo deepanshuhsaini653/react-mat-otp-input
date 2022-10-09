@@ -5,9 +5,10 @@ In this libary module will provide a custom, moduler UI authentication given bel
 ### Features
 
 -   [x] Login Via Password
+-   [x] Forgot Password
+-   [x] Reset Password
 -   [ ] Login Via OTP
--   [ ] Forgot Password
--   [ ] Reset Password
+-   [ ] Verify OTP
 
 [Example Git Url](https://github.com/deepanshuhsaini653/root-application)
 
