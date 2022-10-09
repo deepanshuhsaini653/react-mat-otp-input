@@ -1,6 +1,13 @@
 ### Getting Started
 
-In this libary module will provide a custom, moduler UI authentication like: Login Via OTP, Login Via Password, Forgot Password, Reset Password,.
+In this libary module will provide a custom, moduler UI authentication given below here:
+
+### Features
+
+-   [x] Login Via Password
+-   [ ] Login Via OTP
+-   [ ] Forgot Password
+-   [ ] Reset Password
 
 [Example Git Url](https://github.com/deepanshuhsaini653/root-application)
 
