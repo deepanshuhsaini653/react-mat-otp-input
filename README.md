@@ -36,7 +36,7 @@ ILoginViaPasswordProps {
 ```reactjs
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { LoginViaPassword } from "./../../components";
+import { LoginViaPassword } from "react-mat-authentication";
 
 const LoginComponent = () => {
   const [loader, setLoader] = useState(false);
@@ -87,7 +87,7 @@ IForgotPasswordProps {
 ```reactjs
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { ForgotPassword } from "../../components";
+import { ForgotPassword } from "react-mat-authentication";
 
 const ForgotPasswordComponent = () => {
   const [loader, setLoader] = useState(false);
@@ -137,7 +137,7 @@ IResetPasswordProps {
 ```reactjs
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { ResetPassword } from "../../components";
+import { ResetPassword } from "react-mat-authentication";
 
 export default function ResetPasswordPage() {
   const [loader, setLoader] = useState(false);
