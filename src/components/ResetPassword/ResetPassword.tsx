@@ -9,6 +9,7 @@ import { REGREX } from '../../utils/regrex';
 export interface IResetPasswordProps {
     fieldConfig?: IFeild;
     loader?: boolean;
+    buttonConfig?: any;
     onSubmitData: (data: IFormInputs) => void | undefined;
     redirectToSignIn: () => void | undefined;
 }
@@ -33,7 +34,7 @@ interface IFormInputs {
 }
 
 export const ResetPassword: FC<IResetPasswordProps> = (props) => {
-    const { fieldConfig, onSubmitData, loader, redirectToSignIn } = props;
+    const { fieldConfig, onSubmitData, loader, redirectToSignIn, buttonConfig } = props;
 
     const [visiblePassword, setVisiblePassword] = useState<boolean>(false);
     const [visibleConfPassword, setVisibleConfPassword] = useState<boolean>(false);
@@ -126,6 +127,7 @@ export const ResetPassword: FC<IResetPasswordProps> = (props) => {
                                     loading={loader}
                                     fullWidth
                                     variant="contained"
+                                    {...buttonConfig}
                                 >
                                     <Typography sx={{ fontSize: '1rem' }}>Reset password</Typography>
                                 </LoadingButton>

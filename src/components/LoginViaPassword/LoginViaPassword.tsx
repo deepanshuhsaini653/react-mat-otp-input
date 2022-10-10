@@ -8,6 +8,7 @@ import { REGREX } from '../../utils/regrex';
 
 export interface ILoginViaPasswordProps {
     fieldConfig?: IFeild;
+    buttonConfig?: any;
     fieldGutter?: number;
     loader?: boolean;
     subHead?: string;
@@ -34,7 +35,7 @@ interface IFormInputs {
 }
 
 export const LoginViaPassword: React.FC<any> = (props): JSX.Element => {
-    const { fieldConfig, onSubmitData, loader, redirectToForgotPassword, hideForgotPassword = true, hideRememberMe = true, subHead = 'Powered by ABC Group of Institutions' } = props;
+    const { fieldConfig, onSubmitData, loader, redirectToForgotPassword, hideForgotPassword = true, hideRememberMe = true, subHead = 'Powered by ABC Group of Institutions', buttonConfig } = props;
     const [visiblePassword, setVisiblePassword] = useState<boolean>(false);
     const viewPasswordHandler = () => setVisiblePassword(!visiblePassword);
 
@@ -102,10 +103,10 @@ export const LoginViaPassword: React.FC<any> = (props): JSX.Element => {
                                 />
                             </Grid>
                             <Grid container justifyContent={'space-between'}>
-                                <Grid item xs={2} pb={6} sx={{ textAlign: 'left' }}>
+                                <Grid item xs={6} pb={6} sx={{ textAlign: 'left' }}>
                                     {!!hideRememberMe && <FormControlLabel sx={{ color: '#7B7887', userSelect: 'none' }} control={<Checkbox />} label="Remember me" />}
                                 </Grid>
-                                <Grid item xs={8} pb={6} sx={{ textAlign: 'right' }}>
+                                <Grid item xs={6} pb={6} sx={{ textAlign: 'right' }}>
                                     {!!hideForgotPassword && (
                                         <Button sx={{ textTransform: 'unset', boxShadow: 'none' }} onClick={() => redirectToForgotPassword()}>
                                             <Typography sx={{ fontSize: '.9rem', color: '#1447F7' }}>Forgot password?</Typography>
@@ -125,6 +126,7 @@ export const LoginViaPassword: React.FC<any> = (props): JSX.Element => {
                                     loading={loader}
                                     fullWidth
                                     variant="contained"
+                                    {...buttonConfig}
                                 >
                                     <Typography sx={{ fontSize: '1rem' }}>Sign in</Typography>
                                 </LoadingButton>

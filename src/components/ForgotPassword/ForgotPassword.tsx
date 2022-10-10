@@ -9,6 +9,7 @@ export interface IForgotPasswordProps {
     type: 'mobile' | 'email';
     isCode?: boolean;
     fieldConfig?: IFeild;
+    buttonConfig?: any;
     loader?: boolean;
     onSubmitData: (data: any) => any;
     redirectToSignIn: () => void | undefined;
@@ -46,7 +47,7 @@ const schema = yup.object({
 });
 
 const ForgotPasswordComponent: FC<IForgotPasswordProps> = (props): JSX.Element => {
-    const { onSubmitData, type, isCode = false, loader, redirectToSignIn } = props;
+    const { onSubmitData, type, isCode = false, loader, redirectToSignIn, buttonConfig } = props;
     const fromRef: any = useRef(null);
 
     useEffect(() => {
@@ -147,6 +148,7 @@ const ForgotPasswordComponent: FC<IForgotPasswordProps> = (props): JSX.Element =
                                     loading={loader}
                                     fullWidth
                                     variant="contained"
+                                    {...buttonConfig}
                                 >
                                     <Typography sx={{ fontSize: '1rem' }}>{type === 'mobile' ? 'Request OTP' : 'Forgot password'}</Typography>
                                 </LoadingButton>

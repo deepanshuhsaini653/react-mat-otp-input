@@ -22,6 +22,7 @@ Login feature is working fine now.
 ILoginViaPasswordProps {
   fieldConfig?: IFeild;
   fieldGutter?: number;
+  buttonConfig?: any;
   loader?: boolean;
   subHead?: string;
   onSubmitData?: (data: IFormInputs) => void | undefined;
@@ -76,6 +77,7 @@ IForgotPasswordProps {
   type: "mobile" | "email";
   isCode?: boolean;
   fieldConfig?: IFeild;
+  buttonConfig?: any;
   loader?: boolean;
   onSubmitData: (data: any) => any;
   redirectToSignIn: () => void | undefined;
@@ -126,6 +128,7 @@ Forgot password feature is working fine now.
 IResetPasswordProps {
   fieldConfig?: IFeild;
   loader?: boolean;
+  buttonConfig?: any;
   onSubmitData: (data: IFormInputs) => void | undefined;
   redirectToSignIn: () => void | undefined;
 }
