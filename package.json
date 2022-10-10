@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deepanshuhsaini653/react-auth.git"
+    "url": "https://github.com/deepanshuhsaini653/react-mat-authentication.git"
   },
   "devDependencies": {
     "@types/node": "^18.8.3",
