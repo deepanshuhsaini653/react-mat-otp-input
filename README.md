@@ -8,7 +8,7 @@ In this libary module will provide a custom, moduler UI authentication given bel
 -   [x] Forgot Password
 -   [x] Reset Password
 -   [ ] Login Via OTP
--   [ ] Verify OTP
+-   [x] Verify OTP
 
 [Example Git Url](https://github.com/deepanshuhsaini653/root-application)
 
@@ -120,7 +120,7 @@ export const ForgotPasswordPage = ForgotPasswordComponent;
 
 # Reset Password Feature
 
-Forgot password feature is working fine now.
+Reset password feature is working fine now.
 
 ### Reset Password Props
 
@@ -164,4 +164,58 @@ export default function ResetPasswordPage() {
     </div>
   );
 }
+```
+
+# Verify OTP Feature
+
+Verify OTP feature is working fine now.
+
+### Verify OTP Props
+
+```reactjs
+IVerifyOTPProps {
+  buttonConfig?: any;
+  loader?: boolean;
+  numInputs?: number;
+  otpDuration?: number;
+  isInputNum?: boolean;
+  subHead?: string;
+  onSubmitData: (data: string) => void | undefined;
+  resendOTPData: () => void | undefined;
+}
+```
+
+### Example:
+
+```reactjs
+import React from "react";
+import { VerifiOTP } from "react-mat-authentication";
+
+export const VerifiOTPScreen = () => {
+  const [loader, setLoader] = React.useState(false);
+
+  const resendOtpHandler = () => {};
+
+  const submitHandler = (data: any) => {
+    console.log(data);
+    setLoader(true);
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+  };
+
+  return (
+    <div>
+      <VerifiOTP
+        loader={loader}
+        isInputNum={false}
+        numInputs={6}
+        otpDuration={5}
+        resendOTPData={resendOtpHandler}
+        onSubmitData={submitHandler}
+      />
+    </div>
+  );
+};
+
 ```
