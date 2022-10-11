@@ -1,12 +1,17 @@
 {
-  "name": "react-mat-authentication",
-  "version": "1.2.5",
-  "description": "This is a react library",
+  "name": "react-mat-otp-input",
+  "version": "1.0.3",
+  "description": "This is a OTP input library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "private": false,
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "React OTP",
+    "OTP Library",
+    "OTP"
   ],
   "scripts": {
     "start": "react-scripts start",
@@ -18,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deepanshuhsaini653/react-mat-authentication.git"
+    "url": "https://github.com/deepanshuhsaini653/react-mat-otp-input.git"
   },
   "devDependencies": {
     "@types/node": "^18.8.3",
@@ -26,21 +31,11 @@
     "@types/react-dom": "^18.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "formik": "^2.2.9",
     "typescript": "^4.8.4"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/icons-material": "^5.10.6",
-    "@mui/lab": "^5.0.0-alpha.102",
-    "@mui/material": "^5.10.8",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
-    "formik": "^2.2.9",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.2",
-    "react-otp-input": "^2.4.0",
-    "yup": "^0.32.11"
+    "react-dom": "^18.2.0"
   }
 }
